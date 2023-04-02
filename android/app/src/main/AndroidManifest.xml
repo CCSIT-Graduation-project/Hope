@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hope_application">
+    package="com.hope.hope">
    <application
-        android:label="hope_application"
+        android:label="hope"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

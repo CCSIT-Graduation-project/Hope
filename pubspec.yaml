@@ -1,3 +1,33 @@
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@ZMAlawami 
+CCSIT-Graduation-project
+/
+Hope
+Private
+Cannot fork because forking is disabled.
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Settings
+Hope/pubspec.yaml
+@ZMAlawami
+ZMAlawami first commit
+Latest commit 0dc4427 3 weeks ago
+ History
+ 1 contributor
+90 lines (76 sloc)  3.79 KB
+
 name: hope_application
 description: A new Flutter project.
 # The following line prevents the package from being accidentally published to
@@ -88,3 +118,18 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Hope/pubspec.yaml at Zainab_alawami_interface · CCSIT-Graduation-project/Hope

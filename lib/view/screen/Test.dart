@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:hope_application/core/constant/Color.dart';
-import '../widget/Patients/answer.dart';
-import '../widget/Patients/card.dart';
+import 'package:hope/core/constant/color.dart';
+import 'package:hope/view/widget/Patients/answer.dart';
+import 'package:hope/view/widget/Patients/card.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
