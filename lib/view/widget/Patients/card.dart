@@ -1,7 +1,7 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import 'package:hope_application/core/constant/Color.dart';
+import 'package:hope/core/constant/color.dart';
 
 class QuestionCard extends StatelessWidget {
   const QuestionCard({super.key, required this.index, required this.txt});

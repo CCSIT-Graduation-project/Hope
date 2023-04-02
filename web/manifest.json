@@ -1,6 +1,6 @@
 {
-    "name": "hope_application",
-    "short_name": "hope_application",
+    "name": "hope",
+    "short_name": "hope",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

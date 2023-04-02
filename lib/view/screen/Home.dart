@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hope_application/view/screen/Register.dart';
+import 'package:hope/view/screen/Register.dart';
 import '../widget/CommonPage/Appbar_title.dart';
 import '../widget/CommonPage/Widget_constants.dart';
 

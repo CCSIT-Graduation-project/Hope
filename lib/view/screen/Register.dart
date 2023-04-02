@@ -1,12 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hope_application/view/screen/Home.dart';
-import 'package:hope_application/view/screen/Login.dart';
-import 'package:hope_application/view/widget/CommonPage/ActionButton.dart';
-import 'package:hope_application/view/widget/CommonPage/Appbar_title.dart';
-import 'package:hope_application/view/widget/CommonPage/Greeting_widget.dart';
-import 'package:hope_application/view/widget/CommonPage/Widget_constants.dart';
+import 'package:hope/view/screen/Home.dart';
+import 'package:hope/view/screen/Login.dart';
+import 'package:hope/view/widget/CommonPage/ActionButton.dart';
+import 'package:hope/view/widget/CommonPage/Appbar_title.dart';
+import 'package:hope/view/widget/CommonPage/Greeting_widget.dart';
+import 'package:hope/view/widget/CommonPage/Widget_constants.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);

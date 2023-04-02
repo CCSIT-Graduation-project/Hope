@@ -1,7 +1,7 @@
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import 'package:hope_application/core/constant/Color.dart';
+import 'package:hope/core/constant/color.dart';
 
 class Answer extends StatelessWidget {
   Answer({super.key, required this.value, required this.press});

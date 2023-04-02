@@ -1,13 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hope_application/view/screen/Register.dart';
-import 'package:hope_application/view/screen/Forgot.dart';
-import 'package:hope_application/view/widget/CommonPage/ActionButton.dart';
-import 'package:hope_application/view/widget/CommonPage/Appbar_title.dart';
-import 'package:hope_application/view/widget/CommonPage/Greeting_widget.dart';
-import 'package:hope_application/view/widget/CommonPage/Widget_constants.dart';
+import 'package:hope/view/screen/Forgot.dart';
+import 'package:hope/view/screen/Register.dart';
+import 'package:hope/view/widget/CommonPage/Appbar_title.dart';
+import 'package:hope/view/widget/CommonPage/Greeting_widget.dart';
+import 'package:hope/view/widget/CommonPage/Widget_constants.dart';
 
+import '../widget/CommonPage/ActionButton.dart';
 import 'Home.dart';
 
 class LoginPage extends StatefulWidget {

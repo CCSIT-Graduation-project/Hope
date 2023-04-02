@@ -1,4 +1,4 @@
-# hope_application
+# hope
 
 A new Flutter project.
 

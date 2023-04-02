@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hope_application/Models/Landing_page_helper.dart';
-import 'package:hope_application/view/screen/Login.dart';
-import 'package:hope_application/view/widget/CommonPage/ActionButton.dart';
+import 'package:hope/Models/landing_page_helper.dart';
+import 'package:hope/view/screen/Login.dart';
+import 'package:hope/view/widget/CommonPage/ActionButton.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
