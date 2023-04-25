@@ -8,6 +8,8 @@ class AppColor {
   static const Color white = Color.fromARGB(255, 255, 255, 255);
   static const Color Shadow = Color.fromARGB(157, 91, 91, 91);
   static const Color pink = Color.fromARGB(255, 255, 170, 249);
+  static const Color kPinkColor = Color.fromRGBO(236, 173, 185, 1);
+
   static const free = SizedBox(
     height: 25,
   );

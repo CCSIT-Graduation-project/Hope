@@ -11,17 +11,17 @@ class PageInfoData {
     PageInfo(
       title: 'Breast Cancer Detection',
       message: 'Using the best techniques to help doctors detect tumors.',
-      imageUrl: 'images/logo.png',
+      imageUrl: 'assets/image/logo.png',
     ),
     PageInfo(
       title: 'Brest self-exam',
       message: 'Can be an important way to detect cancer early',
-      imageUrl: 'images/logo.png',
+      imageUrl: 'assets/image/logo.png',
     ),
     PageInfo(
       title: 'WELCOME TO HOPE SYSTEM',
       message: "",
-      imageUrl: 'images/logo.png',
+      imageUrl: 'assets/image/logo.png',
     ),
   ];
 }

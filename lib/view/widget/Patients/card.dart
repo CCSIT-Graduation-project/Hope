@@ -13,7 +13,7 @@ class QuestionCard extends StatelessWidget {
       height: 80,
       decoration: const BoxDecoration(color: AppColor.white, boxShadow: [
         BoxShadow(
-          color: AppColor.Shadow,
+          color: Color.fromARGB(157, 216, 205, 205),
           offset: Offset(0, 1),
           blurRadius: 4,
         )
@@ -23,7 +23,7 @@ class QuestionCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Container(
-              color: AppColor.primary,
+              color: const Color(0xff7f7f7f),
               height: 20,
               width: 40,
               child: Center(

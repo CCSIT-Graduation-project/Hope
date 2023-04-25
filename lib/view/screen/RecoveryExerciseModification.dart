@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../widget/Admin/recovery_exercise_modification.dart';
 
 class RecoveryExercise extends StatelessWidget {
   final String title;
@@ -25,9 +24,9 @@ class RecoveryExercise extends StatelessWidget {
 
             // do something
           )),
-      body: RecoveryExerciseModification(
-        title: 'RecoveryExercise',
-      ),
+      // body: RecoveryExerciseModification(
+      //   title: 'RecoveryExercise',
+      // ),
     ));
   }
 }

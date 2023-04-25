@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:hope/view/screen/RecoveryExerciseModification.dart';
+import 'package:hope/view/screen/Onboarding.dart';
+import 'package:hope/view/screen/RadiologistHome.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,8 +13,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: RecoveryExercise(
-      title: 'a',
+        home: const RadiologistHomeScreen(
+      userRole: 'Radiologist',
     ));
   }
 }

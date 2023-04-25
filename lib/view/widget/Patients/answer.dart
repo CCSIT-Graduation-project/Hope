@@ -16,13 +16,13 @@ class Answer extends StatelessWidget {
           child: Container(
             height: 35,
             decoration: BoxDecoration(
-                color: AppColor.primary,
+                color: const Color(0xff7f7f7f),
                 borderRadius: BorderRadius.circular(15)),
             child: Center(
                 child: Text(
               value,
               style: TextStyle(
-                color: AppColor.bg,
+                color: Colors.white,
               ),
             )),
           ),

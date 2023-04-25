@@ -1,12 +1,16 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hope/view/screen/Home.dart';
 import 'package:hope/view/screen/Login.dart';
 import 'package:hope/view/widget/CommonPage/ActionButton.dart';
 import 'package:hope/view/widget/CommonPage/Appbar_title.dart';
 import 'package:hope/view/widget/CommonPage/Greeting_widget.dart';
 import 'package:hope/view/widget/CommonPage/Widget_constants.dart';
+
+import 'package:hope/view/screen/AdminHome.dart';
+import 'package:hope/view/screen/DoctorHome.dart';
+import 'package:hope/view/screen/PatientHome.dart';
+import 'package:hope/view/screen/RadiologistHome.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -22,7 +26,7 @@ class _RegisterPageState extends State<RegisterPage> {
   final _confirmPasswordController = TextEditingController();
   final GlobalKey<FormState> _key = GlobalKey();
   String? initialValue;
-  List<String> userType = ["Patient", "Doctor", "Specialist"];
+  List<String> userType = ["Patient", "Doctor", "Radiologis", "admin"];
   final _auth = FirebaseAuth.instance;
   bool _loading = false;
 
@@ -244,23 +248,31 @@ class _RegisterPageState extends State<RegisterPage> {
             .doc(value.user!.uid)
             .set({"email": value.user!.email, "userType": initialValue}).then(
                 (value) {
+          if (initialValue == "Admin") {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => AdminHomeScreen(userRole: initialValue!)));
+          }
           if (initialValue == "Patient") {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (_) => HomeScreen(userRole: initialValue!)));
+                    builder: (_) =>
+                        PationtHomeScreen(userRole: initialValue!)));
           }
           if (initialValue == "Doctor") {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (_) => HomeScreen(userRole: initialValue!)));
+                    builder: (_) => DoctorHomeScreen(userRole: initialValue!)));
           }
           if (initialValue == "Specialist") {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (_) => HomeScreen(userRole: initialValue!)));
+                    builder: (_) =>
+                        RadiologistHomeScreen(userRole: initialValue!)));
           }
         });
       });

@@ -8,7 +8,10 @@ import 'package:hope/view/widget/CommonPage/Greeting_widget.dart';
 import 'package:hope/view/widget/CommonPage/Widget_constants.dart';
 
 import '../widget/CommonPage/ActionButton.dart';
-import 'Home.dart';
+import 'package:hope/view/screen/AdminHome.dart';
+import 'package:hope/view/screen/DoctorHome.dart';
+import 'package:hope/view/screen/PatientHome.dart';
+import 'package:hope/view/screen/RadiologistHome.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -66,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                               return "Please Enter Email Address to Continue ";
                             }
                             if (!(text!.contains("@"))) {
-                              return "Enter a Valid Email ID to Continue  ";
+                              return "Enter a Valid Email ID to Continue ";
                             }
                             return null;
                           },
@@ -209,26 +212,33 @@ class _LoginPageState extends State<LoginPage> {
             .then((value) {
           var userType = value.data();
           print(userType);
-          if (userType!["userType"] == "Patient") {
+          if (userType!["userType"] == "Admin") {
             Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (_) =>
-                        HomeScreen(userRole: userType["userType"]!)));
+                        AdminHomeScreen(userRole: userType["userType"]!)));
+          }
+          if (userType["userType"] == "Patient") {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) =>
+                        PationtHomeScreen(userRole: userType["userType"]!)));
           }
           if (userType["userType"] == "Doctor") {
             Navigator.push(
                 context,
                 MaterialPageRoute(
                     builder: (_) =>
-                        HomeScreen(userRole: userType["userType"]!)));
+                        DoctorHomeScreen(userRole: userType["userType"]!)));
           }
           if (userType["userType"] == "Specialist") {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (_) =>
-                        HomeScreen(userRole: userType["userType"]!)));
+                    builder: (_) => RadiologistHomeScreen(
+                        userRole: userType["userType"]!)));
           }
         });
       });

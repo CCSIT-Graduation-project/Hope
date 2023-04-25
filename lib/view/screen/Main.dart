@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:hope/view/screen/Home.dart';
+import 'package:hope/view/screen/AdminHome.dart';
 import 'package:hope/view/screen/Onboarding.dart';
 
 class MainPage extends StatefulWidget {
@@ -18,7 +18,7 @@ class _MainPageState extends State<MainPage> {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return const HomeScreen(
+            return const AdminHomeScreen(
               userRole: "",
             );
           } else {

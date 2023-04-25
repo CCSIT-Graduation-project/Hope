@@ -1,33 +1,41 @@
-// ignore_for_file: camel_case_types
-
 import 'package:flutter/material.dart';
+import 'package:hope/core/constant/color.dart';
+import 'package:hope/view/widget/CommonPage/Appbar_title.dart';
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  //const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(home: Page1());
-  }
-}
-
-class Page1 extends StatelessWidget {
-  const Page1({super.key});
+class RecoveryExercise extends StatelessWidget {
+  const RecoveryExercise({super.key});
 
   //const Page1({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xfff5e9e7),
       appBar: AppBar(
-        centerTitle: true,
-        title: const Text("Recovery Exercises"),
-        backgroundColor: Colors.pinkAccent,
-      ),
+          backgroundColor: const Color.fromARGB(244, 250, 250, 250),
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: Image.asset('assets/image/logo.png'),
+            )
+          ],
+          centerTitle: true,
+          title: const Text("Recovery Exercises"),
+          titleTextStyle: const TextStyle(
+            color: Color.fromRGBO(236, 173, 185, 1),
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              //i have to change direction
+              color: Colors.black54,
+            ),
+          )),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -40,8 +48,7 @@ class Page1 extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (cpntext) => const page2()));
                 },
-                style: ElevatedButton.styleFrom(
-                    primary: const Color.fromARGB(255, 251, 155, 187)),
+                style: ElevatedButton.styleFrom(primary: Colors.grey),
                 child: const Text("Preparing for the surgery exercises"),
               ),
             ),
@@ -56,8 +63,7 @@ class Page1 extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (cpntext) => const page3()));
                 },
-                style: ElevatedButton.styleFrom(
-                    primary: const Color.fromARGB(255, 251, 155, 187)),
+                style: ElevatedButton.styleFrom(primary: Colors.grey),
                 child: const Text("Before the surgery exercises"),
               ),
             ),
@@ -72,8 +78,7 @@ class Page1 extends StatelessWidget {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (cpntext) => const page4()));
                 },
-                style: ElevatedButton.styleFrom(
-                    primary: const Color.fromARGB(255, 251, 155, 187)),
+                style: ElevatedButton.styleFrom(primary: Colors.grey),
                 child: const Text("After the surgery exercises"),
               ),
             ),
@@ -103,33 +108,30 @@ class page2 extends StatelessWidget {
     return MaterialApp(
         title: 'Preparing for the surgery exercises.',
         theme: ThemeData(
-          primarySwatch: Colors.pink,
+          primaryColor: Color.fromARGB(244, 250, 250, 250),
         ),
         home: Scaffold(
+            backgroundColor: const Color(0xfff5e9e7),
             appBar: AppBar(
-              title: const Text("Preparing for the surgery exercises"),
+              title: AppBarTitle(title: "Preparing for the surgery exercises"),
+              backgroundColor: const Color.fromARGB(244, 250, 250, 250),
               automaticallyImplyLeading: true,
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back_ios),
+                color: const Color(0xff7f7f7f),
                 onPressed: () => Navigator.pop(context, false),
               ),
               centerTitle: true,
             ),
             body: ListView(
               children: const [
-                Image(
-                    image: AssetImage('assets/images/RecoveryExercise/1.png')),
-                Image(
-                    image: AssetImage('assets/images/RecoveryExercise/2.png')),
-                Image(
-                    image: AssetImage('assets/images/RecoveryExercise/3.png')),
-                Image(
-                    image: AssetImage('assets/images/RecoveryExercise/4.png')),
-                Image(
-                    image: AssetImage('assets/images/RecoveryExercise/5.png')),
-                Image(
-                    image: AssetImage('assets/images/RecoveryExercise/6.png')),
-                //Image(image: AssetImage('assets/images/preparing.webp')),
+                Image(image: AssetImage('assets/image/RE-1.png')),
+                Image(image: AssetImage('assets/image/RE-2.png')),
+                Image(image: AssetImage('assets/image/RE-3.png')),
+                Image(image: AssetImage('assets/image/RE-4.png')),
+                Image(image: AssetImage('assets/image/RE-5.png')),
+                Image(image: AssetImage('assets/image/RE-6.png')),
+                Image(image: AssetImage('assets/image/preparing.webp')),
               ],
             )));
   }
@@ -143,28 +145,27 @@ class page3 extends StatelessWidget {
     return MaterialApp(
         title: 'Before the surgery exercises.',
         theme: ThemeData(
-          primarySwatch: Colors.pink,
+          primaryColor: Color.fromARGB(244, 250, 250, 250),
         ),
         home: Scaffold(
+            backgroundColor: const Color(0xfff5e9e7),
             appBar: AppBar(
+              title: AppBarTitle(title: "Before the surgery exercises"),
+              backgroundColor: const Color.fromARGB(244, 250, 250, 250),
               automaticallyImplyLeading: true,
-              title: const Text("Before the surgery exercises"),
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back_ios),
+                color: const Color(0xff7f7f7f),
                 onPressed: () => Navigator.pop(context, false),
               ),
               centerTitle: true,
             ),
             body: ListView(
               children: const [
-                Image(
-                    image: AssetImage('assets/images/RecoveryExercise/a.png')),
-                Image(
-                    image: AssetImage('assets/images/RecoveryExercise/b.png')),
-                Image(
-                    image: AssetImage('assets/images/RecoveryExercise/c.png')),
-                Image(
-                    image: AssetImage('assets/images/RecoveryExercise/d.png')),
+                Image(image: AssetImage('assets/image/RE-a.png')),
+                Image(image: AssetImage('assets/image/RE-b.png')),
+                Image(image: AssetImage('assets/image/RE-c.png')),
+                Image(image: AssetImage('assets/image/RE-d.png')),
                 //Image(image: AssetImage('assets/images/preparing.webp')),
               ],
             )));
@@ -179,23 +180,24 @@ class page4 extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'After the surgery exercises.',
-        theme: ThemeData(
-          primarySwatch: Colors.pink,
-        ),
+        theme: ThemeData(),
         home: Scaffold(
+            backgroundColor: const Color(0xfff5e9e7),
             appBar: AppBar(
+              title: AppBarTitle(title: "After the surgery exercises"),
+              backgroundColor: const Color.fromARGB(244, 250, 250, 250),
               automaticallyImplyLeading: true,
-              title: const Text("After the surgery exercises."),
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back_ios),
+                color: const Color(0xff7f7f7f),
                 onPressed: () => Navigator.pop(context, false),
               ),
               centerTitle: true,
             ),
             body: ListView(
               children: const [
-                Image(image: AssetImage('assets/images/y.png')),
-                Image(image: AssetImage('assets/images/z.png')),
+                Image(image: AssetImage('assets/image/RE-y.png')),
+                Image(image: AssetImage('assets/image/RE-z.png')),
                 //Image(image: AssetImage('assets/images/preparing.webp')),
               ],
             )));

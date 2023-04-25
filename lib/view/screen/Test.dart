@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hope/core/constant/color.dart';
+import 'package:hope/view/widget/CommonPage/Appbar_title.dart';
 import 'package:hope/view/widget/Patients/answer.dart';
 import 'package:hope/view/widget/Patients/card.dart';
 
@@ -17,18 +18,38 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColor.bg,
+        backgroundColor: const Color(0xfff5e9e7),
         appBar: AppBar(
-          backgroundColor: AppColor.primary,
-          title: const Center(
-              child: Text(
-            "Breast Cancer test",
-            style: TextStyle(color: AppColor.bg),
-          )),
-        ),
+            backgroundColor: const Color.fromARGB(244, 250, 250, 250),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: Image.asset('assets/image/logo.png'),
+              )
+            ],
+            centerTitle: true,
+            title: const Text("Breast Cancer test"),
+            titleTextStyle: const TextStyle(
+              color: Color.fromRGBO(236, 173, 185, 1),
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+            leading: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.arrow_back_ios,
+                //i have to change direction
+                color: Colors.black54,
+              ),
+            )),
         body: SafeArea(
           child: show == false
               ? Center(
+                  child: SizedBox(
+                  height: 60, //height of button
+                  width: 150,
                   child: ElevatedButton(
                     onPressed: () {
                       setState(() {
@@ -36,14 +57,14 @@ class _QuizState extends State<Quiz> {
                       });
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColor.bg,
+                      backgroundColor: const Color(0xff7f7f7f),
                     ),
                     child: const Text(
                       "Start",
-                      style: TextStyle(color: AppColor.black),
+                      style: TextStyle(color: AppColor.white),
                     ),
                   ),
-                )
+                ))
               : QuizBody(),
         ));
   }
@@ -143,11 +164,11 @@ class _QuizBodyState extends State<QuizBody> {
       return showDialog(
           context: context,
           builder: (context) => AlertDialog(
-                backgroundColor: AppColor.bg,
+                backgroundColor: const Color(0xff7f7f7f),
                 alignment: Alignment.center,
                 title: const Icon(
                   AppColor.fownn,
-                  color: AppColor.primary,
+                  color: Color.fromARGB(157, 211, 187, 201),
                   size: 45,
                 ),
                 content: Column(children: [
@@ -167,7 +188,7 @@ class _QuizBodyState extends State<QuizBody> {
                       },
                       icon: const Icon(
                         Icons.restart_alt_rounded,
-                        color: AppColor.primary,
+                        color: const Color(0xfff5e9e7),
                         size: 22,
                       ))
                 ]),
@@ -176,11 +197,11 @@ class _QuizBodyState extends State<QuizBody> {
       return showDialog(
           context: context,
           builder: (context) => AlertDialog(
-                backgroundColor: AppColor.bg,
+                backgroundColor: const Color(0xfff5e9e7),
                 alignment: Alignment.center,
                 title: const Icon(
                   AppColor.meh,
-                  color: AppColor.primary,
+                  color: const Color(0xff7f7f7f),
                   size: 45,
                 ),
                 content: Column(children: [
@@ -200,7 +221,7 @@ class _QuizBodyState extends State<QuizBody> {
                       },
                       icon: const Icon(
                         Icons.restart_alt_rounded,
-                        color: AppColor.primary,
+                        color: const Color(0xff7f7f7f),
                         size: 22,
                       ))
                 ]),
@@ -209,11 +230,11 @@ class _QuizBodyState extends State<QuizBody> {
       return showDialog(
           context: context,
           builder: (context) => AlertDialog(
-                backgroundColor: AppColor.bg,
+                backgroundColor: const Color(0xfff5e9e7),
                 alignment: Alignment.center,
                 title: const Icon(
                   AppColor.smile,
-                  color: AppColor.primary,
+                  color: const Color(0xff7f7f7f),
                   size: 45,
                 ),
                 content: Column(children: [
@@ -233,7 +254,7 @@ class _QuizBodyState extends State<QuizBody> {
                       },
                       icon: const Icon(
                         Icons.restart_alt_rounded,
-                        color: AppColor.primary,
+                        color: const Color(0xfff5e9e7),
                         size: 22,
                       ))
                 ]),
@@ -289,23 +310,21 @@ class _QuizBodyState extends State<QuizBody> {
 
   Widget seen(int index) {
     return Container(
-        height: 40,
-        width: 40,
-        decoration: const BoxDecoration(
-            color: AppColor.primary, shape: BoxShape.circle),
-        child: Center(
-          child: Container(
+      height: 40,
+      width: 40,
+      decoration: const BoxDecoration(
+          color: Color.fromARGB(157, 215, 207, 212), shape: BoxShape.circle),
+      child: Center(
+        child: Container(
             height: 35,
             width: 35,
-            decoration:
-                const BoxDecoration(color: AppColor.bg, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+                color: const Color(0xff7f7f7f), shape: BoxShape.circle),
             child: Center(
-                child: Text(
-              "$index",
-              style: TextStyle(color: AppColor.primary),
+              child: Text("$index", style: TextStyle(color: Colors.white)),
             )),
-          ),
-        ));
+      ),
+    );
   }
 
   Widget wait(int index) {
@@ -333,8 +352,9 @@ class _QuizBodyState extends State<QuizBody> {
           child: Container(
             height: 35,
             width: 35,
-            decoration:
-                const BoxDecoration(color: AppColor.bg, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+                color: Color.fromARGB(139, 252, 246, 249),
+                shape: BoxShape.circle),
             child: Center(
                 child: Text(
               "$index",
