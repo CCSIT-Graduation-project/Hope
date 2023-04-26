@@ -182,20 +182,20 @@ class PationtHomeScreen extends StatelessWidget {
                                           ))));
                         },
                       ),
-                      GButton(
-                        icon: Icons.chat,
-                        text: 'Live chat',
-                        onPressed: () async {
-                          await FirebaseAuth.instance
-                              .signOut()
-                              .then((value) => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (_) => chatpage(
-                                            email: '',
-                                          ))));
-                        },
-                      ),
+                      // GButton(
+                      //   icon: Icons.chat,
+                      //   text: 'Live chat',
+                      //   onPressed: () async {
+                      //     await FirebaseAuth.instance
+                      //         .signOut()
+                      //         .then((value) => Navigator.push(
+                      //             context,
+                      //             MaterialPageRoute(
+                      //                 builder: (_) => chatpage(
+                      //                       email: '',
+                      //                     ))));
+                      //   },
+                      // ),
                       GButton(
                         icon: Icons.contact_emergency,
                         text: 'About us',

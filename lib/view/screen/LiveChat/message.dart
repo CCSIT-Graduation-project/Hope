@@ -1,4 +1,3 @@
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +22,7 @@ class _messagesState extends State<messages> {
       stream: _messageStream,
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) {
-          return Text("something is wrong");
+          return Text(" ");
         }
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(
