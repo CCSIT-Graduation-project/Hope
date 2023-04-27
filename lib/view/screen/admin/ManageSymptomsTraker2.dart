@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../widget/Admin/manage_symptoms_tracker.dart';
-
 class ManageSymptomsTracker2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +16,6 @@ class ManageSymptomsTracker2 extends StatelessWidget {
             },
             icon: Icon(
               Icons.arrow_back_ios,
-              //i have to change direction
               color: Colors.white,
             ),
 

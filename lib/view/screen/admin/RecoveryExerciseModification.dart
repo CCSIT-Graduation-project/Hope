@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../widget/Admin/manage_account.dart';
-
-class ManageAccount extends StatelessWidget {
+class RecoveryExercise1 extends StatelessWidget {
+  final String title;
+  const RecoveryExercise1({Key? key, required this.title}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      backgroundColor: Color.fromARGB(255, 207, 167, 188),
+      backgroundColor: Color.fromARGB(255, 226, 162, 195),
       appBar: AppBar(
-          backgroundColor: Color.fromARGB(0, 220, 198, 214),
-          title: Text('Manage account'),
+          backgroundColor: Color.fromARGB(0, 209, 120, 184),
+          title: Text('Recovery exercise updating'),
           centerTitle: true,
           leading: IconButton(
             onPressed: () {
@@ -18,14 +18,15 @@ class ManageAccount extends StatelessWidget {
             },
             icon: Icon(
               Icons.arrow_back_ios,
+              //i have to change direction
               color: Colors.white,
             ),
 
             // do something
           )),
-      body: Account(
-        title: 'Manage account',
-      ),
+      // body: RecoveryExerciseModification(
+      //   title: 'RecoveryExercise',
+      // ),
     ));
   }
 }

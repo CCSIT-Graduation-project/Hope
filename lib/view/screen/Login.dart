@@ -6,7 +6,6 @@ import 'package:hope/view/screen/Register.dart';
 import 'package:hope/view/widget/CommonPage/Appbar_title.dart';
 import 'package:hope/view/widget/CommonPage/Greeting_widget.dart';
 import 'package:hope/view/widget/CommonPage/Widget_constants.dart';
-
 import '../widget/CommonPage/ActionButton.dart';
 import 'package:hope/view/screen/AdminHome.dart';
 import 'package:hope/view/screen/DoctorHome.dart';
