@@ -7,22 +7,39 @@ class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(top: 40),
+      padding: EdgeInsets.symmetric(horizontal: 11),
       child: Row(
         children: <Widget>[
           Expanded(
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 161, 164, 164),
+                backgroundColor: const Color(0xff7f7f7f),
               ),
               onPressed: () {},
-              child: Text("Admin"),
+              child: Text("Doctor"),
             ),
+          ),
+          SizedBox(
+            width: 30,
           ),
           Expanded(
             child: ElevatedButton(
               child: Text("pationt"),
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 161, 164, 164),
+                backgroundColor: const Color(0xff7f7f7f),
+              ),
+              onPressed: () {},
+            ),
+          ),
+          SizedBox(
+            width: 30,
+          ),
+          Expanded(
+            child: ElevatedButton(
+              child: Text("Radiologist"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xff7f7f7f),
               ),
               onPressed: () {},
             ),

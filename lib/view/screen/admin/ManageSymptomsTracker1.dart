@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../widget/Admin/manage_symptoms_tracker.dart';
 
 class ManageSymptomsTracker1 extends StatelessWidget {
   @override
